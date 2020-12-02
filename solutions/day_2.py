@@ -16,10 +16,7 @@ def part_1_validator(a: int, b: int, char: str, string: str) -> bool:
 
 def part_2_validator(a: int, b: int, char: str, string: str) -> bool:
     def matches(pos: int) -> bool:
-        try:
-            return string[pos - 1] == char
-        except IndexError:
-            return False
+        return string[pos - 1] == char
 
     return sum((matches(a), matches(b))) == 1
 
