@@ -8,11 +8,10 @@ def solve(report: Set[int], parts: int, target: int) -> int:
             return r
         if r > target:
             continue
-        answer = r * solve(
-            report - {r},
-            parts - 1,
-            target - r
-        )
-        if answer:
+        if answer := r * solve(
+                report - {r},
+                parts - 1,
+                target - r
+        ):
             return answer
     return 0
