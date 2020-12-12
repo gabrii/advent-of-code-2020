@@ -47,4 +47,4 @@ def test_example_part_2(example_input):
 
 
 def test_input_part_2(puzzle_input):
-    assert get_key(puzzle_input, 25) == -1
+    assert get_key(puzzle_input, 25) == 268878261
